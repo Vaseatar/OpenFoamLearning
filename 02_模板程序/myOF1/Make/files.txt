@@ -1,0 +1,7 @@
+//files文件内容
+myOF1.C   //指定要运行的.C文件
+
+EXE = $(FOAM_USER_APPBIN)/myOF1
+/$(FOAM_USER_APPBIN)指定生成程序的存放地址
+// myOF1是程序名
+//编译完后可以在$(FOAM_USER_APPBIN)目录下看见myOF1可执行文件

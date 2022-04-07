@@ -1,0 +1,11 @@
+//Make/options文件内容
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -lmeshTools
+在.C文件中包含了很多.H的头文件和库，要在Make/options文件中指定这些头文件的位置，否则在编译时，编译器不知道去哪找到这些.H文件。例如很多.C文件都会包含的#include "fvCFD.H"，fvCFD.H包含了OpenFOAM中大部分的基本类型，其位置由$(LIB_SRC)/finiteVolume/lnInclude给定。
+
+
